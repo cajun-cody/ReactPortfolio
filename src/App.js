@@ -6,6 +6,7 @@ import NavLinks from './Components/NavLinks/navlinks';
 import About from './Components/About/about';
 import Portfolio from './Components/Projects/portfolio';
 import SkillsAndTechnologies from './Components/SkillsAndTechnologies/SkillsAndTechnologies';
+import ContactForm from './Components/Contact/contact';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <About/>
       <SkillsAndTechnologies/>
       <Portfolio/>
+      <ContactForm/>
     </div>
   );
 }

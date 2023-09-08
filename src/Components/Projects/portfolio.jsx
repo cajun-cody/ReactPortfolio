@@ -5,7 +5,9 @@ import project1 from '../../Assets/project1.jpg';
 import MusicLibrary from '../../Assets/MusicLibrary.png';
 import backwardCajun from '../../Assets/backwardCajun.jpg';
 
+
 const Portfolio = () => {
+
     return ( 
     <section class="portfolio" id="portfolio">
         <h2 class="heading">Latest <span>Projects</span></h2>
