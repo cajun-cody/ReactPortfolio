@@ -1,43 +1,80 @@
-
+/* SkillsAndTechnologies.css */
 .services {
-    margin-bottom: 5rem;
+    background: var(--second-bg-color);
+    padding: 10rem;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+    gap: 2rem;
+}
+
+.services h2 {
+    margin-bottom: 4rem;
 }
 
 .services-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 2rem;
 }
 
-/* responsive design set up for the flexbox to grow and shring depending on the window */
-.services-container .services-box {
-    flex: 1 1 30rem;
-    background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem ;
+.services-box {
+    background: var(--bg-color);
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--second-bg-color);
+    padding: 2rem;
     text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition:  .5s ease;
+    width: calc(33.33% - 2rem);
 }
 
-/* transform will scale size, use small increments */
-.services-container .services-box:hover {
-border-color: var(--main-color);
-transform: scale(1.02);
-}
-
-.services-box i{
-    font-size:  7rem;
+.services-box i {
+    font-size: 3rem;
     color: var(--main-color);
 }
 
 .services-box h3 {
-    font-size: 2.6rem;
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: var(--text-color);
 }
 
 .services-box p {
     font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+    color: var(--text-color);
 }
+
+.services-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-box ul li {
+    font-size: 1.8rem;
+    margin: 0.8rem 0;
+    color: var(--text-color);
+}
+
+/* Added animation to life goal.  */
+@keyframes fadeInAndBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.life-goal {
+    color: var(--main-color);
+    font-size: 3.6rem;
+    margin-top: 20rem;
+    opacity: 0; /* Start with opacity 0 */
+    animation: fadeInAndBounce 2s ease infinite; /* Use the keyframe animation */
+}
+

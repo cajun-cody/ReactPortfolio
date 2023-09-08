@@ -41,7 +41,8 @@
     align-items: center;
     height: 20%;  
     font-size: 2rem;
-     
+    background-color: var(--main-color);
+    color: var(--bg-color)
 }
 
 /* adds linear gradient over the image  */
@@ -69,6 +70,8 @@
 .portfolio-layer p {
     font-size: 1.6rem;
     margin: .3rem 0 1rem;
+
+    font-weight: bolder;
 }
 
 .portfolio-layer a {
@@ -79,12 +82,44 @@
     height: 5rem;
     background: var(--text-color);
     border-radius: 50%;
+
 }
 
 .portfolio-layer a i {
-    font-size: 2rem;
+    font-size: 4rem;
     color: var(--second-bg-color);
     background-color: var(--main-color); 
     border-radius: 20px; /* Add rounded corners */
 
+}
+
+.project-links {
+    display: flex;
+    justify-content: center; /* Center-align the anchor tags horizontally */
+    align-items: center; /* Center-align the anchor tags vertically */
+    gap: 10px; /* Add spacing between anchor tags */
+    padding: 4px;
+    width: 100%; /* Adjust the width as needed */
+}
+
+.project-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+
+.project-links a:last-child {
+    margin-left: 10px; /* Add spacing to the left of the last anchor tag */
+}
+
+.project-links a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+    background-color: var(--main-color); 
+    border-radius: 20px; /* Add rounded corners */
 }
