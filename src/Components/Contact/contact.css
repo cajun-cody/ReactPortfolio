@@ -16,6 +16,10 @@
     flex-wrap: wrap;
 }
 
+.contact form .input-box .email-input{
+    margin-left: 14px;
+}
+
 .contact form .input-box input,
 .contact form textarea {
     width: 100%;
@@ -30,6 +34,8 @@
 .contact form .input-box input {
     width: 49%;
 }
+
+
 
 .contact form textarea {
     resize: none;

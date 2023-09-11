@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import './about.css';
 import myImage from '../../Assets/profile.png';
+import ScrollReveal from 'scrollreveal';
 
 const About = () => {
     const [showMore, setShowMore] = useState(false);
@@ -9,6 +10,12 @@ const About = () => {
         setShowMore(!showMore);
     }
 
+    ScrollReveal({ 
+        reset: true,
+        distance: '80px',
+        duration: 2000,
+        delay: 200
+    });
 
     return (
         <section className="about" id="about">

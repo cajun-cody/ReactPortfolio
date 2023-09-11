@@ -8,7 +8,10 @@ import Portfolio from './Components/Projects/portfolio';
 import SkillsAndTechnologies from './Components/SkillsAndTechnologies/SkillsAndTechnologies';
 import ContactForm from './Components/Contact/contact';
 
+
 function App() {
+
+
   return (
     <div className="App">
       <MyHeader/>

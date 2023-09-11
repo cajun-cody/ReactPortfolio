@@ -7,12 +7,12 @@ const Home = () => {
     return ( 
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hello, It's Me</h3>
+            {/* <h3>Hello, It's Me</h3> */}
             <h1>Cody Dugas</h1>
             <h4><i>The Backward Cajun</i></h4>
             <h3>And I'm a <span class="multiple-text">
             <Typed
-                strings={['Creator', 'FullStack Developer', 'Software Tester']}
+                strings={['Creator', 'Full Stack Developer', 'Software Tester']}
                 typeSpeed={100}
                 backSpeed={100}
                 backDelay={1000}
@@ -25,7 +25,7 @@ const Home = () => {
                 <a href="https://github.com/cajun-cody"><i class='bx bxl-github'></i></a>
                 <a href="https://www.reddit.com/user/cajun-cody"><i class='bx bxl-reddit'></i></a>
             </div>
-            <a href="#contact" class="btn">Hire Me</a>
+            <a href="#contact" class="btn">Contact Me</a>
         </div>
     </section>
      );
