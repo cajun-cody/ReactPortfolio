@@ -35,8 +35,6 @@
     width: 49%;
 }
 
-
-
 .contact form textarea {
     resize: none;
 }
@@ -44,4 +42,41 @@
 .contact form .btn {
     margin-top: 2rem;
     cursor: pointer;
+}
+
+/* Media query for 850px and below */
+@media screen and (max-width: 850px) {
+    .contact form .input-box {
+        flex-direction: column;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+
+    .contact form .input-box .email-input{
+        margin-left: 0px;
+    }
+}
+
+/* Media query for 768px and below */
+@media screen and (max-width: 768px) {
+    .contact form .input-box {
+        flex-direction: column;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+
+    .contact form .input-box .email-input{
+        margin-left: 0px;
+    }
+}
+
+/* Media query 375px and below */
+@media screen and (max-width: 320px) {
+    .contact form .input-box input {
+        width: 100%;
+    }
 }

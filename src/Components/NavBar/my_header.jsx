@@ -9,21 +9,27 @@ const MyHeader = () => {
       setIsMenuOpen(!isMenuOpen);
     };
 
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+      };
+
     return ( 
     <header class="header">
         <a href="#portfolio" class="logo">Portfolio</a>
-        
-        {/* <i class='bx bx-menu' id="menu-icon"></i>  */}
+
         <i className={`bx bx-menu`} id="menu-icon" onClick={toggleMenu}></i>
         <nav class="navbar">
-            <a href="#home" className={` ${isMenuOpen ? 'active' : ''}`}>Home</a>
-            <a href="#about" className={` ${isMenuOpen ? 'active' : ''}`}>About</a>
-            <a href="#services" className={` ${isMenuOpen ? 'active' : ''}`}>Services</a>
-            <a href="#portfolio" className={` ${isMenuOpen ? 'active' : ''}`}>Portfolio</a>
-            <a href="#contact" className={` ${isMenuOpen ? 'active' : ''}`}>Contact</a>
+        <div className={`menu ${isMenuOpen ? "open" : ""}`}>
+            <i className={`bx bxs-x-square`} id="close-icon" onClick={closeMenu}></i>
+            <a href="#home" className={` ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}>Home</a>
+            <a href="#about" className={` ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}>About</a>
+            <a href="#services" className={` ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}>Services</a>
+            <a href="#portfolio" className={` ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}>Portfolio</a>
+            <a href="#contact" className={` ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}>Contact</a>
+        </div>
         </nav>
     </header>
      );
 }
- 
+
 export default MyHeader;

@@ -34,7 +34,8 @@
 }
 
 .services-box h3 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 2vw, 3rem); /* Clamp- Adjust the minimum, preferred, and maximum font size as needed */
+    /* font-size: 3rem; */
     margin: 1rem 0;
     color: var(--text-color);
 }
@@ -50,6 +51,8 @@
 }
 
 .services-box ul li {
+    font-size: clamp(1rem, 2vw, 1.8rem); /* Clamp- Adjust the minimum, preferred, and maximum font size as needed */
+
     font-size: 1.8rem;
     margin: 0.8rem 0;
     color: var(--text-color);
@@ -69,12 +72,57 @@
         transform: translateY(-10px);
     }
 }
-
+/* Keyframe animation to fade in and out.  */
 .life-goal {
     color: var(--main-color);
     font-size: 3.6rem;
     margin-top: 20rem;
-    opacity: 0; /* Start with opacity 0 */
-    animation: fadeInAndBounce 2s ease infinite; /* Use the keyframe animation */
+    opacity: 0; 
+    animation: fadeInAndBounce 2s ease infinite; 
 }
+
+/* Media query 768px */
+
+@media screen and (max-width: 768px) {
+    .services {
+        padding: 5rem; 
+    }
+
+    .services-container {
+        flex-direction: column; 
+        gap: 3rem;
+    }
+
+    .services-box {
+        width: 100%; 
+    }
+
+    .life-goal {
+        margin-top: 10rem; 
+    }
+}
+
+/* Media query 320px */
+@media screen and (max-width: 320px) {
+    .services {
+        padding: 3rem; 
+    }
+
+    .services h2 {
+        font-size: 3rem; 
+    }
+
+    .services-box {
+        padding: 1.5rem; 
+    }
+
+    .life-goal {
+        margin-top: 5rem; 
+        font-size: 2.4rem; 
+    }
+}
+
+
+
+
 

@@ -56,9 +56,10 @@
     justify-content: center;
     align-items: center;
     height: 20%;  
-    font-size: 2rem;
+    font-size: clamp(1rem, 2vw, 2rem); /* Clamp- Adjust the minimum, preferred, and maximum font size as needed */
     background-color: var(--main-color);
     color: var(--bg-color)
+
 }
 
 /* adds linear gradient over the image  */
@@ -75,20 +76,26 @@
     flex-direction: column;
     text-align: center;
     padding: 0 4rem;
-    transform: translateY(100%);
+    opacity: 0;
     transition: .5s ease;
+    transform: translateY(100%);
+    p {
+        opacity: 0;
+        transition: opacity 0.5s ease; /* Add a smooth transition effect */
+    }
+
 }
 /* effect only happens when hovering over each container */
 .portfolio-box:hover  .portfolio-layer{
+    opacity: 1;
     transform: translateY(0);
 }
 
-
-
 .portfolio-layer p {
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
+    font-size: clamp(.8rem, 2vw, 1.3rem); /* Clamp- Adjust the minimum, preferred, and maximum font size as needed */
+    margin: 0.3rem 0 1rem;
     font-weight: bolder;
+    text-align: center;
 }
 
 .portfolio-layer a {
@@ -112,11 +119,11 @@
 
 .project-links {
     display: flex;
-    justify-content: center; /* Center-align the anchor tags horizontally */
-    align-items: center; /* Center-align the anchor tags vertically */
-    gap: 10px; /* Add spacing between anchor tags */
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
     padding: 4px;
-    width: 100%; /* Adjust the width as needed */
+    width: 100%; 
 }
 
 .project-links a {
@@ -139,4 +146,43 @@
     color: var(--second-bg-color);
     background-color: var(--main-color); 
     border-radius: 20px; /* Add rounded corners */
+}
+
+/* Media query 1200px */
+@media screen and (max-width: 1200px) {
+    .portfolio-container {
+        grid-template-columns: repeat(3, 1fr); /* Display two columns on smaller screens */
+        gap: 1.5rem; 
+    }
+
+    .portfolio-box {
+        height: auto; 
+    }
+
+    .portfolio-title {
+        text-align: center;
+    }
+
+}
+
+
+/* Media query 768px */
+@media screen and (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr); /* Display two columns on smaller screens */
+        gap: 1.5rem; 
+    }
+
+    .portfolio-box {
+        height: auto; 
+    }
+
+}
+
+/* Media query 375px */
+@media screen and (max-width: 375px) {
+    .portfolio-container {
+        grid-template-columns: repeat(1, 1fr); /* Display one column on even smaller screens */
+        gap: 1rem; 
+    }
 }

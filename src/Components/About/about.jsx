@@ -27,7 +27,7 @@ const About = () => {
                 <h2 className="heading">About <span>Me</span></h2>
                 <h3>Full Stack Developer</h3>
                 <p>
-                I have been in the medial world for close to 20 years. Beginning my journey as an Paramedic, I quickly learned the value of technology used in patient care. This was the spark that dwelled within me which would later become a passion. 
+                I have been in the medical world for close to 20 years. Beginning my journey as an Paramedic, I quickly learned the value of technology used in patient care. This was the spark that dwelled within me which would later become a passion. 
                 <br></br>
                 <br></br>
                 Later in my professional career I was drawn to companies that were on the cutting edge of technology in their respected fields. I  began to involve myself more on the technological side of the medical world to better understand the tools used by medical professionals. 
@@ -50,7 +50,7 @@ const About = () => {
                 Far and away the best prize that life offers is the chance to work hard at work worth doing. – Theodore Roosevelt
                  </>
                 ) : (  
-                    " [Show more...]"
+                    " [click to read full story...]"
                 )}
                 </p>
                 <a href="#about" className="btn" onClick={toggleContent}>
